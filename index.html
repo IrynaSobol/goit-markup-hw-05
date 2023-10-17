@@ -388,11 +388,13 @@
                           <input type="text" name="email" placeholder="E-mail" />
                         </label>
                     </form>
-                    <button class="subscribe-btn" type="submit">Subscribe
+                    <div>
+                        <button class="subscribe-btn" type="submit">Subscribe
                             <svg class="btn-icon">
                                 <use href="./images/icon-Frame-3"></use>
                             </svg>
-                    </button>  
+                        </button>  
+                    </div>
                 </div>
             </div>
         </div>        
@@ -405,49 +407,60 @@
                 </svg> 
             </button>
             <p class="contacts-title">Leave your contacts and we will call you back</p>
-            <form class="contacts-form" name="contacts_form" autocomplete="off" novalidate>
-                <label class="contacts-form-label">Name
+            <form class="contacts-form" name="contacts_form" autocomplete="off">
+                <label class="contacts-label">Name
                     <div class="contacts-input-wrap">
                         <input 
                         class="contacts-input" 
                         type="text" 
-                        name="username" 
-                        autofocus />
+                        name="user-name" 
+                        autofocus required />
                         <svg class="contacts-icon" width="18" height="18">
                             <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
                         </svg> 
                     </div>
                 </label>
-                <label class="contacts-form-label">Phone
+                <label class="contacts-label">Phone
                     <div class="contacts-input-wrap">
                         <input 
                         class="contacts-input" 
                         type="tel" 
-                        name="phone" />
+                        name="user-phone" 
+                        maxlength="15" required />
                         <svg class="contacts-icon" width="18" height="18">
                             <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
                         </svg>
                     </div>
                 </label> 
-                <label class="contacts-form-label">Email
+                <label class="contacts-label">Email
                     <div class="contacts-input-wrap">
                         <input 
                         class="contacts-input" 
                         type="email" 
-                        name="email" />
+                        name="user-email" required />
                         <svg class="contacts-icon" width="18" height="18">
                             <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
                         </svg> 
                     </div>                  
                 </label>
-
-                <label class="contacts-form-label">Comment
+                <label class="contacts-label">Comment
                     <textarea
                         class="contacts-textarea"
-                        name="comment"
+                        name="user-comment"
                         placeholder="Text input"
                     ></textarea>
                 </label>
+                <label>
+                    <div>
+                        <input 
+                        type="checkbox" 
+                        name="user-accept" 
+                        value="accept" />I accept the terms and conditions of the Privacy Policy
+                        <svg width="16" height="16">
+                            <use href="./images/icons.svg#icon-Property-1click"></use>
+                    </svg>   
+                    </div>
+                  </label>
                
                 <button class="contacts-form-btn" type="submit">Send</button>
             </form>       
