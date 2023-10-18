@@ -382,24 +382,22 @@
             </div>
             <div class="box-subscribe">
                 <p class="subscribe-title">Subscribe</p>
-                <div class="subscribe-item">
-                    <form class="subscribe-form" name="subscribe" autocomplete="off">
-                        <label class="placeholder">
-                          <input type="text" name="email" placeholder="E-mail" />
-                        </label>
-                    </form>
-                    <div>
-                        <button class="subscribe-btn" type="submit">Subscribe
-                            <svg class="btn-icon">
-                                <use href="./images/icon-frame-3"></use>
+                <form class="subscribe-form" name="subscribe" autocomplete="off">
+                    <input 
+                        class="subscribe-email" 
+                        type="email" 
+                        name="subemail"
+                        placeholder="E-mail" />
+
+                    <button class="subscribe-btn" type="submit">Subscribe
+                        <svg class="subscribe-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-frame-3"></use>
                             </svg>
-                        </button>  
-                    </div>
-                </div>
-            </div>
-        </div>        
+                    </button>
+                </form>  
+            </div>        
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop">
         <div class="modal">
             <button class="modal-btn-close" type="button">
                 <svg class="x-close-icon" width="8" height="8">
@@ -464,7 +462,7 @@
                         class="contacts-check visually-hidden" 
                         type="checkbox" 
                         name="terms"
-                        id="terms" />
+                        id="terms" required />
                     <label class="contacts-check-text" for="terms">
                         <span class="checkbox-span">
                             <svg class="checkbox-icon" width="10" height="8">
@@ -482,3 +480,5 @@
 </body>
 
 </html>
+
+
