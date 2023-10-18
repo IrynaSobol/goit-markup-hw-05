@@ -531,27 +531,15 @@ img {
     padding: 8px 24px;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-
 /*=====Modal=====*/
 .backdrop {
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    visibility: hidden;
+    background-color: rgba(46, 47, 66, 0.40);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
 }
 
@@ -608,6 +596,10 @@ img {
     margin-bottom: 16px;
 }
 
+.contacts-field {
+    margin-bottom: 8px;
+}
+
 .contacts-label {
     display: block;
     color: #8E8F99;
@@ -615,7 +607,6 @@ img {
     font-weight: 400;
     line-height: 1.67;
     letter-spacing: 0.04em;
-    margin-bottom: 8px;
 }
 
 .contacts-input-wrap {
@@ -648,7 +639,6 @@ img {
 
 .contacts-input:focus + .contacts-icon {
     fill: #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .contacts-textarea {
@@ -659,7 +649,6 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.40);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 8px 16px;
-    margin-bottom: 16px;
     outline: transparent;
     resize: none;
 }
@@ -673,6 +662,10 @@ img {
 }
 
 /*=====Contacts Checxbox=====*/
+.contacts-check {
+    margin-right: 8px;
+}
+
 .contacts-check-text {
     display: flex;
     align-items: center;
@@ -681,27 +674,43 @@ img {
     font-weight: 400;
     line-height: 1.67;
     letter-spacing: 0.04em;
+    margin-bottom: 24px;
 }
 
-.contacts-check-text a {
+.contacts-check-text  a {
     color: #4D5AE5;
     text-decoration: underline; 
 }
 
-.check-text-box {
-    display: block;
+.checkbox-span {
+    position: relative;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
-    stroke-width: 1px;
-    stroke: rgba(46, 47, 66, 0.40);
-    margin-right: 24px;
+    width: 16px;
+    fill: transparent;
+    border: 1px solid  rgba(46, 47, 66, 0.40);
+    border-radius: 2px;
+    margin-right: 8px;
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-check:checked + .contacts-check-text {
+.checkbox-icon {
+    fill: #f4f4fd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacts-check:checked + .contacts-check-text> .checkbox-span {
     background-color: #404BBF;
 }
 
-.contacts-form-btn {
+.contacts-btn {
     background-color: #4D5AE5;
     border-radius: 4px;
     border: none;
@@ -720,3 +729,15 @@ img {
     transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
