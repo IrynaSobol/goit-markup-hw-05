@@ -483,6 +483,7 @@ img {
     background-color: #31D0AA;
 }
 
+/*=====SUBSCRIBE=====*/
 .subscribe-title {
     color: #FFF;
     font-size: 16px;
@@ -596,10 +597,6 @@ img {
     margin-bottom: 16px;
 }
 
-.contacts-field {
-    margin-bottom: 8px;
-}
-
 .contacts-label {
     display: block;
     color: #8E8F99;
@@ -607,10 +604,12 @@ img {
     font-weight: 400;
     line-height: 1.67;
     letter-spacing: 0.04em;
+    margin-bottom: 4px;
 }
 
 .contacts-input-wrap {
     position: relative;
+    margin-bottom: 8px;
 }
 
 .contacts-input {
@@ -649,6 +648,7 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.40);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 8px 16px;
+    margin-bottom: 16px;
     outline: transparent;
     resize: none;
 }
