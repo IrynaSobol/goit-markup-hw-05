@@ -383,21 +383,24 @@
             <div class="box-subscribe">
                 <p class="subscribe-title">Subscribe</p>
                 <form class="subscribe-form" name="subscribe" autocomplete="off">
-                    <label class="subscribe-label" for="subemail">
-                        <input 
+                    <label class="subscribe-label" for="sub-email"></label>
+                    <input 
                         class="subscribe-email" 
                         type="email" 
-                        name="subemail"
+                        name="sub-email"
+                        id="sub-email"
                         placeholder="E-mail" />
-                    </label>
+                    
                     <button class="subscribe-btn" type="submit">Subscribe
                         <svg class="subscribe-icon" width="24" height="24">
                             <use href="./images/icons.svg#icon-frame-3"></use>
                             </svg>
                     </button>                                       
                 </form>  
-            </div>        
+            </div>
+        </div>        
     </footer>
+
     <div class="backdrop is-open">
         <div class="modal">
             <button class="modal-btn-close" type="button">
@@ -449,7 +452,7 @@
                         </svg> 
                     </div>
                 </div>
-                <div>
+                <div class="contacts-comment">
                     <label class="contacts-label" for="user-comment">Comment</label>
                     <textarea
                         class="contacts-textarea"
@@ -471,7 +474,8 @@
                                 <use href="./images/icons.svg#icon-vector"></use>
                             </svg>
                         </span>
-                        I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+                        I accept the terms and conditions of the <a class="check-text" href="">Privacy Policy</a>
+                    </label>
                 </div>
                                                        
                 <button class="contacts-btn" type="submit">Send</button>
